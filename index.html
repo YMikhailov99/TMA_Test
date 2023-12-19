@@ -116,12 +116,12 @@
                 title: 'Title',
                 message: 'Some message',
                 buttons: [
-                    {id: 'link', type: 'default', text: 'Open ton.org'},
+                    {id: 'link', type: 'default', text: 'wqerqwerqwer'},
                     {type: 'cancel'},
                 ]
             }, function(btn) {
                 if (btn === 'link') {
-                    Telegram.WebApp.openLink('https://ton.org/');
+                    Telegram.WebApp.openLink('http://localhost:8003/');
                 }
             });
         };
