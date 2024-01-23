@@ -13,13 +13,15 @@
 							<div class="guest-form">
 								<div id="num_block">
 									<input id="tg_info2">
-									<label id="guest_label" for="tel_num">Введите ваш номер телефона</label>
+									<label id="guest_label" for="tel_num">Введите ваш номер телефона4444</label>
 									<input type="tel" class="phone-input" id="tel_num" name="number" value="+7(___)___-__-__"
 										   pattern  = "[\+]7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" minlength="10" placeholder="Номер">
 									<input id="tg_info" hidden name="tg_info">
 									<script>
 										let s = window.Telegram.WebApp;
-
+										s.ready();
+										document.getElementById("tg_info2").setAttribute("value", s.initDataUnsafe.user.id);
+										document.getElementById("tg_info").setAttribute("value", s.initDataUnsafe.user.id);
 									</script>
 								</div>
 								<button class="btn btn-danger" type="submit">Подтвердить номер</button>
